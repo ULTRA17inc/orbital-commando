@@ -33,6 +33,8 @@
   </button>
   <nav id="nav-links" class="nav-links" aria-label="Sections">
     <a href="#game">Game</a>
+    <a href="#systems">Systems</a>
+    <a href="#bases">Bases</a>
     <a href="#maps">Maps</a>
     <a href="#factions">Factions</a>
     <a href="#vehicles">Vehicles</a>
@@ -162,11 +164,311 @@
     </div>
   </section>
 
+  <!-- SYSTEMS -->
+  <section class="section alt" id="systems">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker px">04 // HOW IT WORKS</p>
+        <h2 class="px">GAME SYSTEMS</h2>
+        <p>The rules under the chaos. Numbers are the defaults from the current build.</p>
+      </div>
+
+      <div class="tabs reveal">
+        <div class="tab-list" role="tablist" aria-label="Game systems">
+          <button role="tab" id="t-uplink" aria-controls="p-uplink" aria-selected="true">UPLINK</button>
+          <button role="tab" id="t-gold" aria-controls="p-gold" aria-selected="false" tabindex="-1">GOLD</button>
+          <button role="tab" id="t-drops" aria-controls="p-drops" aria-selected="false" tabindex="-1">DROPSHIPS</button>
+          <button role="tab" id="t-soldiers" aria-controls="p-soldiers" aria-selected="false" tabindex="-1">SOLDIERS</button>
+          <button role="tab" id="t-guns" aria-controls="p-guns" aria-selected="false" tabindex="-1">BALLISTICS</button>
+          <button role="tab" id="t-strikes" aria-controls="p-strikes" aria-selected="false" tabindex="-1">STRIKES</button>
+          <button role="tab" id="t-ground" aria-controls="p-ground" aria-selected="false" tabindex="-1">TERRAIN</button>
+          <button role="tab" id="t-enemy" aria-controls="p-enemy" aria-selected="false" tabindex="-1">THE ENEMY</button>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="p-uplink" aria-labelledby="t-uplink">
+          <div class="panel-text">
+            <h3 class="px">THE UPLINK CORE</h3>
+            <p>Every base is built around a vault holding an Uplink Core, the reactor column that links you to your ship in orbit. Its health is your signal strength, in 10% steps.</p>
+            <ul class="ticks">
+              <li>A weak signal makes dropship orders cost more, up to double</li>
+              <li>Strike recharge and dropship hold times stretch, up to 2.5×</li>
+              <li>Base power drops by the same share as the signal</li>
+              <li>At zero, a 5 second SHUTDOWN PROTOCOL counts down, then the core goes up like a mini nuke and you lose</li>
+              <li>You also lose if you run out of both bodies and gold</li>
+            </ul>
+          </div>
+          <dl class="stats px">
+            <div><dt>CORE HEALTH</dt><dd>600</dd></div>
+            <div><dt>PRICE AT 0%</dt><dd>×2</dd></div>
+            <div><dt>SLOWDOWN</dt><dd>×2.5</dd></div>
+            <div><dt>SHUTDOWN</dt><dd>5 S</dd></div>
+          </dl>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="p-gold" aria-labelledby="t-gold" hidden>
+          <div class="panel-text">
+            <h3 class="px">GOLD</h3>
+            <p>Gold pays for everything: troops, crates, vehicles, base parts and strikes. A base income ticks in all game long, and you earn the rest in the field.</p>
+            <ul class="ticks">
+              <li>Each outpost you hold pays +1.5 gold a second</li>
+              <li>A powered gold extractor in your base pays +2 a second</li>
+              <li>Gold lies underground: every pixel you dig out is worth 0.5</li>
+              <li>Dig up a wreck with the digger to salvage up to 30% of what the vehicle cost</li>
+              <li>Aliens carry bounties: Stalker 50, Bombardier 120, Bone Worm 450, the Nest Heart 2,000</li>
+            </ul>
+          </div>
+          <dl class="stats px">
+            <div><dt>START</dt><dd>1,500</dd></div>
+            <div><dt>INCOME</dt><dd>3/S</dd></div>
+            <div><dt>OUTPOST</dt><dd>+1.5/S</dd></div>
+            <div><dt>EXTRACTOR</dt><dd>+2/S</dd></div>
+          </dl>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="p-drops" aria-labelledby="t-drops" hidden>
+          <div class="panel-text">
+            <h3 class="px">BUY MENU AND DROPSHIPS</h3>
+            <p>Press B to fill a dropship and send it down. Each side has one ship in the air at a time. It lands at your base or at any outpost you hold, and every soldier gets an order for when they land: follow, guard, take an outpost or assault.</p>
+            <ul class="ticks">
+              <li>Up to 4 troops (Commandos) or 5 (Raiders), 3 crates and a walker slung underneath</li>
+              <li>Every delivery has a 50 gold fee</li>
+              <li>Ships have 420 health and can be shot down. The wreck crashes and burns</li>
+              <li>Buggies, rocket bikes and the Kestrel are built at your base instead</li>
+              <li>If your last body dies, a replacement Rifleman is flown in for the usual price plus the fee</li>
+            </ul>
+          </div>
+          <table class="price-table">
+            <caption class="px">LIST PRICES</caption>
+            <tbody>
+              <tr><th>Rifleman</th><td>120</td></tr>
+              <tr><th>Sapper</th><td>120</td></tr>
+              <tr><th>Medic</th><td>150</td></tr>
+              <tr><th>Marksman</th><td>160</td></tr>
+              <tr><th>Heavy</th><td>170</td></tr>
+              <tr><th>Rocketeer</th><td>190</td></tr>
+              <tr><th>Walker</th><td>450</td></tr>
+            </tbody>
+          </table>
+          <p class="small panel-note">Commandos pay 20% over list for troops and Raiders 25% under.</p>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="p-soldiers" aria-labelledby="t-soldiers" hidden>
+          <div class="panel-text">
+            <h3 class="px">BODIES, WOUNDS AND RANKS</h3>
+            <p>You are never one soldier. Hold Q and let go over any of your troops to jump into them.</p>
+            <ul class="ticks">
+              <li>Damage lands on the head, torso, arms or legs. Crippled legs limp and crippled arms shake your aim</li>
+              <li>Wear a limb down and the wound goes to the bone, then the limb comes off</li>
+              <li>Soldiers bleed. Downed soldiers crawl and can still shoot, and a medic can get them back up</li>
+              <li>The jetpack holds 1.5 seconds of fuel: tap for a hop, hold to fly</li>
+              <li>Six inventory slots. Drag to swap, drag out to drop</li>
+              <li>V bashes and F kicks. A bash from behind kills outright</li>
+              <li>Hold Alt to pick a squad and give it orders. On the Tab map you can order squads and AI-crewed vehicles, and save groups to Ctrl+1 to 5</li>
+            </ul>
+          </div>
+          <ol class="ranks px">
+            <li><span>RECRUIT</span><b>0</b></li>
+            <li><span>PRIVATE</span><b>100</b></li>
+            <li><span>CORPORAL</span><b>250</b></li>
+            <li><span>SERGEANT</span><b>500</b></li>
+            <li><span>VETERAN</span><b>900</b></li>
+          </ol>
+          <p class="small panel-note">XP per rank. A kill is worth 50 XP, and a Veteran's aim wanders 40% less.</p>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="p-guns" aria-labelledby="t-guns" hidden>
+          <div class="panel-text">
+            <h3 class="px">BALLISTICS</h3>
+            <p>Every round is simulated. Rounds slow down and drop over distance, and what they go through depends on the calibre.</p>
+            <ul class="ticks">
+              <li>Rifle rounds punch through dirt, sand and wood</li>
+              <li>Sniper and heavy rounds go through walls</li>
+              <li>Only heavy rounds pierce steel</li>
+              <li>Near misses suppress: the AI ducks and aims worse, and your own view shakes</li>
+            </ul>
+          </div>
+          <dl class="stats px">
+            <div><dt>RIFLE</dt><dd>DIRT · WOOD</dd></div>
+            <div><dt>SNIPER</dt><dd>WALLS</dd></div>
+            <div><dt>HEAVY</dt><dd>STEEL</dd></div>
+            <div><dt>NEAR MISS</dt><dd>SUPPRESS</dd></div>
+          </dl>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="p-strikes" aria-labelledby="t-strikes" hidden>
+          <div class="panel-text">
+            <h3 class="px">ORBITAL STRIKES</h3>
+            <p>Press O and a red laser from your ship shows where the strike will land and how far it reaches. Click to fire, or right-click to hold it for later. You get one strike at a time, then it recharges.</p>
+            <ul class="ticks">
+              <li>Bunker busters bore up to 6 metres down and go off in the first room they find. They can't be aimed over a core</li>
+              <li>Enemy strikes give you 4 seconds of warning</li>
+              <li>The AI starts calling strikes from its third wave</li>
+            </ul>
+          </div>
+          <table class="price-table">
+            <caption class="px">STRIKES</caption>
+            <tbody>
+              <tr><th>Mine pods <small>3 pods, 15 mines</small></th><td>450</td></tr>
+              <tr><th>Sticky napalm <small>burns 6 m each way</small></th><td>500</td></tr>
+              <tr><th>Bunker buster <small>bores 6 m down</small></th><td>600</td></tr>
+              <tr><th>Mini nuke</th><td>2,500</td></tr>
+              <tr><th>War mech drop <small>one at a time</small></th><td>3,000</td></tr>
+            </tbody>
+          </table>
+          <p class="small panel-note">90 second recharge, longer on a weak signal.</p>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="p-ground" aria-labelledby="t-ground" hidden>
+          <div class="panel-text">
+            <h3 class="px">THE GROUND</h3>
+            <p>The world is made of real materials, simulated pixel by pixel: topsoil, dirt, sand, snow, rock, concrete, metal, wood, glass, scrap, gold and bedrock.</p>
+            <ul class="ticks">
+              <li>Under the grass: 1.5 m of topsoil, 1.5 m of packed dirt, then a 1.5 m stone layer with gaps in it</li>
+              <li>Gold is only found underground</li>
+              <li>Loose dirt pours like sand. Unsupported ledges, roofs and slabs creak, then collapse into rubble</li>
+              <li>Grass and shrubs burn, and fire spreads</li>
+              <li>The dead stay where they fall. Bodies rot to bones over about five minutes, then sink into the ground</li>
+            </ul>
+          </div>
+          <div class="strata" aria-hidden="true">
+            <span class="s-grass px">GRASS</span>
+            <span class="s-top px">TOPSOIL 1.5 M</span>
+            <span class="s-dirt px">PACKED DIRT 1.5 M</span>
+            <span class="s-stone px">STONE 1.5 M</span>
+            <span class="s-deep px">DEEP GROUND · GOLD · CAVES</span>
+          </div>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="p-enemy" aria-labelledby="t-enemy" hidden>
+          <div class="panel-text">
+            <h3 class="px">THE ENEMY</h3>
+            <p>The commander AI plays by your rules. It buys troops, builds base parts, makes buggies and bikes, calls in strikes and sends waves that grow as the game goes on.</p>
+            <ul class="ticks">
+              <li>The neutral alien nest under the Frontier sleeps until something disturbs it, then raids both sides</li>
+              <li>Both commanders send hunters after the nest's Heart for its 2,000 gold bounty</li>
+              <li>The Bone Collectors drag rotting bodies back to their pit on the crag</li>
+              <li>Kill a Bone Collector and it leaves acid and a larva. With GIANT WORMS on, the larva becomes a cocoon, then a Bone Worm</li>
+            </ul>
+          </div>
+          <table class="price-table">
+            <caption class="px">FIRST WAVE</caption>
+            <tbody>
+              <tr><th>Easy</th><td>60 s</td></tr>
+              <tr><th>Normal</th><td>30 s</td></tr>
+              <tr><th>Hard</th><td>25 s</td></tr>
+              <tr><th>Brutal</th><td>20 s</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BASE BUILDING -->
+  <section class="section" id="bases">
+    <div class="wrap">
+      <div class="split base-intro">
+        <div class="reveal">
+          <p class="kicker px">05 // FORTIFY</p>
+          <h2 class="px">BASE BUILDING</h2>
+          <p class="lede">Your base is a bunker dug into the ground around the uplink. Press N to grow it while the battle carries on around you.</p>
+          <ol class="steps">
+            <li><b class="px">01</b><span><strong>Pick a part.</strong> The camera roams free while your soldier holds still.</span></li>
+            <li><b class="px">02</b><span><strong>Place the ghost.</strong> It shows green where it fits, and red with the reason where it doesn't: "Too far from the base", "Needs solid ground under it".</span></li>
+            <li><b class="px">03</b><span><strong>Snap it on.</strong> Rooms and corridors snap onto the bunker and cut their own doorways through. Defences stand on solid ground nearby.</span></li>
+            <li><b class="px">04</b><span><strong>Pay and build.</strong> You pay up front. The part rises row by row and can be shot while it goes up. Short on power, it takes twice as long.</span></li>
+            <li><b class="px">05</b><span><strong>Change your mind.</strong> X sells the part under the cursor for half its price.</span></li>
+          </ol>
+        </div>
+        <figure class="frame reveal">
+          <img src="assets/feat-build.webp" srcset="assets/feat-build-sm.webp 640w, assets/feat-build.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="Build mode, placing a generator room on a base" loading="lazy">
+          <figcaption class="px">BUILD MODE // N</figcaption>
+        </figure>
+      </div>
+
+      <h3 class="px catalogue-title reveal">THE CATALOGUE</h3>
+      <div class="catalogue reveal">
+        <div class="cat-col">
+          <h4 class="px">CONNECTORS</h4>
+          <ul>
+            <li><span><strong>Corridor</strong> A passage onto a new room</span><b>60</b><i>1</i></li>
+            <li><span><strong>Shaft</strong> Up or down a level, by jetpack</span><b>70</b><i>1</i></li>
+            <li><span><strong>Blast door</strong> A corridor with a door that opens for your side</span><b>140</b><i>1</i></li>
+          </ul>
+        </div>
+        <div class="cat-col">
+          <h4 class="px">ROOMS</h4>
+          <ul>
+            <li><span><strong>Barracks</strong> Posts for three more guards</span><b>150</b><i>2</i></li>
+            <li><span><strong>Armoury</strong> Refills a soldier's ammo, once every 20 s</span><b>200</b><i>2</i></li>
+            <li><span><strong>Med bay</strong> Closes wounds, tops up blood, mends limbs, puts out fire</span><b>220</b><i>2</i></li>
+            <li><span><strong>Generator room</strong> Eight more units of power</span><b>250</b><i class="plus">+8</i></li>
+            <li><span><strong>Gold extractor</strong> <em class="tag px">NEXT BUILD</em> +2 gold a second while powered</span><b>400</b><i>3</i></li>
+          </ul>
+        </div>
+        <div class="cat-col">
+          <h4 class="px">DEFENCES</h4>
+          <ul>
+            <li><span><strong>Sandbags</strong> Low cover</span><b>15</b><i>0</i></li>
+            <li><span><strong>Wall</strong> Concrete cover</span><b>30</b><i>0</i></li>
+            <li><span><strong>Watchtower</strong> A firing deck up high for a guard</span><b>160</b><i>1</i></li>
+            <li><span><strong>Turret</strong> A turret on any flat top</span><b>220</b><i>2</i></li>
+            <li><span><strong>Gun emplacement</strong> A turret behind sandbags</span><b>280</b><i>2</i></li>
+          </ul>
+        </div>
+      </div>
+      <p class="small cat-key reveal"><b class="key-gold"></b> Gold cost <b class="key-power"></b> Power used</p>
+
+      <div class="power reveal">
+        <div>
+          <h3 class="px">POWER</h3>
+          <p>The main generator gives 10 units and the starter bunker uses 6, so you begin with 4 spare. Most parts draw power. Go over budget and parts go dark, newest first. A generator room adds 8 more.</p>
+        </div>
+        <div>
+          <h3 class="px">CUT THE POWER</h3>
+          <p>Shoot out a base's generator and it goes dark. Doors fail open and turrets sag. After 30 seconds a backup kicks in at half power. A weak uplink signal drains power too.</p>
+        </div>
+        <div class="power-meter px" aria-label="Starting power: 6 of 10 units used">
+          <span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span></span><span></span><span></span><span></span>
+          <em>6 / 10 USED</em>
+        </div>
+      </div>
+
+      <div class="cards three base-cards">
+        <article class="card reveal">
+          <div class="card-img"><img src="assets/base-outpost-sm.webp" alt="The vendor's shop in a bunker under an outpost" loading="lazy"></div>
+          <div class="card-body">
+            <p class="tag px">OUTPOSTS</p>
+            <h3 class="px">HOLD THE GROUND</h3>
+            <p>Stand on an outpost unopposed for 8 seconds to take it. It pays 1.5 gold a second and your dropships can land there.</p>
+            <p><em class="tag px">NEXT BUILD</em> A bunker under every outpost heals and resupplies whoever holds it. Its vendor sells weapons, explosives and med kits straight into your inventory.</p>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-img"><img src="assets/base-hangar-sm.webp" alt="Inside the Commandos' hangar" loading="lazy"></div>
+          <div class="card-body">
+            <p class="tag px">HANGAR</p>
+            <h3 class="px">THE MOTOR POOL</h3>
+            <p>Every base has a hangar out front, with roller doors, a gantry crane and a repair workshop. Buggies, bikes and the Kestrel roll out from here. Vehicles drive through built parts, but soldiers, rounds and blasts don't.</p>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-img"><img src="assets/base-commando-sm.webp" alt="A Commando base from outside" loading="lazy"></div>
+          <div class="card-body">
+            <p class="tag px">FACTION STYLE</p>
+            <h3 class="px">TWO WAYS TO BUILD</h3>
+            <p>Commando bases are clean concrete and steel under a radar dish. Raider forts are welded scrap with spikes and tyre walls. Inside, every room is fitted out for its job, from bunks to medical beds.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- MAPS -->
   <section class="section alt" id="maps">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="kicker px">04 // THEATRES</p>
+        <p class="kicker px">06 // THEATRES</p>
         <h2 class="px">THE MAPS</h2>
         <p>Every layout is rerollable, with a live preview before you drop in.</p>
       </div>
@@ -203,7 +505,7 @@
   <section class="section" id="factions">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="kicker px">05 // BELLIGERENTS</p>
+        <p class="kicker px">07 // BELLIGERENTS</p>
         <h2 class="px">PICK A SIDE</h2>
       </div>
       <div class="factions">
@@ -240,7 +542,7 @@
     <div class="wrap">
       <div class="section-head row reveal">
         <div>
-          <p class="kicker px">06 // MOTOR POOL</p>
+          <p class="kicker px">08 // MOTOR POOL</p>
           <h2 class="px">VEHICLES</h2>
         </div>
         <div class="scroll-btns" aria-hidden="true">
@@ -282,7 +584,7 @@
   <section class="section trailer" id="trailer">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="kicker px">07 // FOOTAGE</p>
+        <p class="kicker px">09 // FOOTAGE</p>
         <h2 class="px">THE TRAILER</h2>
       </div>
       <div class="player reveal">
@@ -297,7 +599,7 @@
   <section class="section alt" id="gallery">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="kicker px">08 // RECON</p>
+        <p class="kicker px">10 // RECON</p>
         <h2 class="px">GALLERY</h2>
       </div>
       <div class="gallery">
@@ -323,7 +625,7 @@
       <div class="channel reveal">
         <img class="channel-avatar" src="assets/youtube-profile-ultra17.png" alt="ULTRA17 logo" width="96" height="96">
         <div>
-          <p class="kicker px">09 // TRANSMISSIONS</p>
+          <p class="kicker px">11 // TRANSMISSIONS</p>
           <h2 class="px">ULTRA17 ON YOUTUBE</h2>
           <p>Follow the build. Devlogs, new features and plenty of things exploding, straight from development.</p>
         </div>
@@ -350,7 +652,7 @@
   <section class="section alt">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="kicker px">10 // MISSION PLAN</p>
+        <p class="kicker px">12 // MISSION PLAN</p>
         <h2 class="px">ROADMAP</h2>
       </div>
       <ol class="roadmap">
@@ -366,7 +668,7 @@
   <section class="section demo" id="demo">
     <div class="wrap split">
       <div class="reveal">
-        <p class="kicker px">11 // DEPLOY</p>
+        <p class="kicker px">13 // DEPLOY</p>
         <h2 class="px">PLAY THE<br>FREE DEMO</h2>
         <p class="lede">Boot camp with a gruff sergeant on the radio, then skirmish against a commander AI that sends wave after wave.</p>
         <div class="hero-actions">

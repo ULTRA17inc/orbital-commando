@@ -39,6 +39,28 @@ if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   hero.pause();
 }
 
+// Game systems tabs: click, or arrow keys along the tab row.
+const tabs = [...document.querySelectorAll('[role="tab"]')];
+function selectTab(tab) {
+  tabs.forEach((t) => {
+    const on = t === tab;
+    t.setAttribute("aria-selected", on);
+    t.tabIndex = on ? 0 : -1;
+    document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
+  });
+  tab.scrollIntoView({ block: "nearest", inline: "nearest" });
+}
+tabs.forEach((t, i) => {
+  t.addEventListener("click", () => selectTab(t));
+  t.addEventListener("keydown", (e) => {
+    const step = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+    if (!step) return;
+    const next = tabs[(i + step + tabs.length) % tabs.length];
+    selectTab(next);
+    next.focus();
+  });
+});
+
 // Vehicle rail arrows.
 const rail = document.getElementById("rail");
 document.querySelectorAll("[data-scroll]").forEach((b) =>
