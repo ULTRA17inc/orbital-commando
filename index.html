@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orbital Commando | ULTRA17</title>
+  <meta name="description" content="Orbital Commando is a 2D side-on war sandbox where every pixel is real. You command from orbit through the uplink, and your body is expendable. Free Windows demo out now. Made by ULTRA17.">
+  <meta name="theme-color" content="#0a0c10">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Orbital Commando">
+  <meta property="og:description" content="You command from orbit through the uplink. Your body is expendable. A 2D war sandbox where every pixel is real.">
+  <meta property="og:image" content="assets/og-card.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preload" href="assets/orbital-pixel.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Orbital Commando, back to top">
+    <img src="assets/youtube-profile-ultra17.png" alt="" width="36" height="36">
+    <span class="brand-text"><span class="px">ULTRA17</span><span class="brand-sub">Orbital Commando</span></span>
+  </a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <nav id="nav-links" class="nav-links" aria-label="Sections">
+    <a href="#game">Game</a>
+    <a href="#maps">Maps</a>
+    <a href="#factions">Factions</a>
+    <a href="#vehicles">Vehicles</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#devlog">Devlog</a>
+    <a class="btn btn-sm" href="#demo">Free demo</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/hero-poster.jpg" aria-hidden="true">
+      <source src="assets/hero-loop.mp4" type="video/mp4">
+    </video>
+    <div class="hero-shade"></div>
+    <div class="hud-frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+    <div class="hero-inner">
+      <p class="chip px"><span class="dot"></span> IN DEVELOPMENT // DEMO v0.1</p>
+      <h1 class="hero-title px">ORBITAL<br>COMMANDO<span class="caret"></span></h1>
+      <p class="hero-tag">You command from orbit through the uplink.<br><strong>Your body is expendable.</strong></p>
+      <div class="hero-actions">
+        <a class="btn" href="#demo">Get the free demo</a>
+        <button class="btn btn-ghost" data-trailer>
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4 2v12l10-6z" fill="currentColor"/></svg>
+          Watch the trailer
+        </button>
+      </div>
+    </div>
+
+    <dl class="hero-readout px" aria-label="At a glance">
+      <div><dt>PLATFORM</dt><dd>WINDOWS</dd></div>
+      <div><dt>PRICE</dt><dd>FREE DEMO</dd></div>
+      <div><dt>PLAYERS</dt><dd>1-2 LOCAL</dd></div>
+      <div><dt>UPLINK</dt><dd class="ok">ONLINE</dd></div>
+    </dl>
+  </section>
+
+  <!-- PITCH -->
+  <section class="section pitch" id="game">
+    <div class="wrap split">
+      <div class="reveal">
+        <p class="kicker px">01 // THE UPLINK</p>
+        <h2 class="px">COMMAND FROM ORBIT</h2>
+        <p class="lede">Orbital Commando is a 2D side-on war sandbox. You're a commander in orbit, wired into a body on the ground.</p>
+        <p>Fight with it, buy reinforcements and drop them in by dropship, build out your base and call down orbital strikes. When your body dies, jump into the next soldier and keep going. <strong>Lose the uplink and you lose the war.</strong></p>
+      </div>
+      <figure class="frame reveal">
+        <img src="assets/orbit.webp" srcset="assets/orbit-sm.webp 640w, assets/orbit.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="A dropship leaving orbit above the planet" loading="lazy">
+        <figcaption class="px">ORBITAL DROP // INBOUND</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- EVERY PIXEL -->
+  <section class="section pixel-real">
+    <div class="pixel-bg" style="--img: url('assets/feat-terrain.webp')"></div>
+    <div class="wrap">
+      <div class="pixel-card reveal">
+        <p class="kicker px">02 // THE GROUND</p>
+        <h2 class="px">EVERY PIXEL<br>IS REAL</h2>
+        <p>The ground is a simulated material world. Dig tunnels, blast craters, burn the grass and collapse bunkers onto the people inside them.</p>
+        <p>Bodies take real wounds. They bleed, break and ragdoll, and the battlefield remembers every fight.</p>
+        <ul class="ticks">
+          <li>Destructible soil, stone and concrete</li>
+          <li>Wounds, ragdolls and gibs</li>
+          <li>Calibre-based penetration and suppression</li>
+          <li>Fire that spreads through the grass</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker px">03 // FIELD MANUAL</p>
+        <h2 class="px">WHAT YOU'LL DO</h2>
+      </div>
+      <div class="features">
+        <article class="feature reveal">
+          <img src="assets/feat-orbital-sm.webp" alt="Napalm raining down from an orbital strike" loading="lazy">
+          <div>
+            <h3 class="px">ORBITAL STRIKES</h3>
+            <p>Aim napalm, mine pods and bunker busters from orbit and watch the ground come apart.</p>
+          </div>
+        </article>
+        <article class="feature reveal">
+          <img src="assets/feat-build-sm.webp" alt="Build mode, placing a generator in a base" loading="lazy">
+          <div>
+            <h3 class="px">BUILD MODE</h3>
+            <p>Add rooms, defences and generators to your base while the battle is still running.</p>
+          </div>
+        </article>
+        <article class="feature reveal">
+          <img src="assets/feat-squads-sm.webp" alt="Giving orders to a squad" loading="lazy">
+          <div>
+            <h3 class="px">SQUADS AND RANKS</h3>
+            <p>Order squads, promote veterans and bring medics. Switch between your soldiers at any moment.</p>
+          </div>
+        </article>
+        <article class="feature reveal">
+          <img src="assets/feat-uplink-sm.webp" alt="The glowing orbital uplink inside a base" loading="lazy">
+          <div>
+            <h3 class="px">DEFEND THE UPLINK</h3>
+            <p>Each side has one. Damage it and their strikes and drops get weaker. Blow it out and they're finished.</p>
+          </div>
+        </article>
+        <article class="feature reveal">
+          <img src="assets/feat-coop-sm.webp" alt="Two players in split screen" loading="lazy">
+          <div>
+            <h3 class="px">LOCAL CO-OP</h3>
+            <p>Plug in an Xbox controller for player 2 and play in split screen.</p>
+          </div>
+        </article>
+        <article class="feature reveal">
+          <img src="assets/shot-12-sm.webp" alt="The skirmish setup on the title screen" loading="lazy">
+          <div>
+            <h3 class="px">ENDLESS SKIRMISH</h3>
+            <p>Reroll any map with random traits: caves, gold, weather, time of day and outposts. Or switch the aliens off for a straight two-army fight.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAPS -->
+  <section class="section alt" id="maps">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker px">04 // THEATRES</p>
+        <h2 class="px">THE MAPS</h2>
+        <p>Every layout is rerollable, with a live preview before you drop in.</p>
+      </div>
+      <div class="cards three">
+        <article class="card reveal">
+          <div class="card-img"><img src="assets/map-frontier-sm.webp" alt="Red-rock mesas behind the Frontier's hills" loading="lazy"></div>
+          <div class="card-body">
+            <p class="tag px">IN THE DEMO</p>
+            <h3 class="px">THE FRONTIER</h3>
+            <p>Rugged hills over a cave network, a neutral alien nest deep under the middle and the Bone Collectors' crag.</p>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-img"><img src="assets/map-proving-sm.webp" alt="A concrete deck under a huge ruined building" loading="lazy"></div>
+          <div class="card-body">
+            <p class="tag px">IN THE DEMO</p>
+            <h3 class="px">THE PROVING GROUNDS</h3>
+            <p>Four metres of concrete built for vehicles, ramped decks and two huge ruined buildings to drive under and fight through.</p>
+          </div>
+        </article>
+        <article class="card reveal locked">
+          <div class="card-img"><img src="assets/map-expanse-sm.webp" alt="A walled fortress with a moat and drawbridge" loading="lazy"></div>
+          <div class="card-body">
+            <p class="tag tag-lock px">FULL GAME</p>
+            <h3 class="px">THE EXPANSE</h3>
+            <p>A map twice as wide, four regions, and walled fortresses with gatehouses and drawbridges.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACTIONS -->
+  <section class="section" id="factions">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker px">05 // BELLIGERENTS</p>
+        <h2 class="px">PICK A SIDE</h2>
+      </div>
+      <div class="factions">
+        <article class="faction reveal" style="--c: var(--cyan)">
+          <img src="assets/faction-commandos-sm.webp" alt="The Commandos' base and hangar" loading="lazy">
+          <div class="faction-body">
+            <p class="tag px">PLAYABLE</p>
+            <h3 class="px">COMMANDOS</h3>
+            <p>Elite, armoured and well supplied. Clean steel bases, cyan visors and the Kestrel gunship.</p>
+          </div>
+        </article>
+        <article class="faction reveal" style="--c: var(--orange)">
+          <img src="assets/faction-raiders-sm.webp" alt="Raiders firing from rocket bikes" loading="lazy">
+          <div class="faction-body">
+            <p class="tag px">PLAYABLE</p>
+            <h3 class="px">RAIDERS</h3>
+            <p>Scrap-built and loud. Rusted forts, rocket bikes and a habit of riding straight at you.</p>
+          </div>
+        </article>
+        <article class="faction reveal" style="--c: var(--acid)">
+          <img src="assets/faction-skarn-sm.webp" alt="The Skarn Brood Mother" loading="lazy">
+          <div class="faction-body">
+            <p class="tag tag-lock px">FULL GAME</p>
+            <h3 class="px">THE SKARN BROOD</h3>
+            <p>An alien hive faction of stalkers, bombardiers and a Brood Mother, all fighting for the Heart.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- VEHICLES -->
+  <section class="section alt" id="vehicles">
+    <div class="wrap">
+      <div class="section-head row reveal">
+        <div>
+          <p class="kicker px">06 // MOTOR POOL</p>
+          <h2 class="px">VEHICLES</h2>
+        </div>
+        <div class="scroll-btns" aria-hidden="true">
+          <button class="icon-btn" data-scroll="-1" tabindex="-1">&#9664;</button>
+          <button class="icon-btn" data-scroll="1" tabindex="-1">&#9654;</button>
+        </div>
+      </div>
+      <div class="rail" id="rail" tabindex="0" aria-label="Vehicles, scroll sideways">
+        <article class="vehicle">
+          <img src="assets/veh-buggy-sm.webp" alt="An Assault Buggy jumping a hill" loading="lazy">
+          <h3 class="px">ASSAULT BUGGY</h3>
+          <p>A crewed gun on four wheels that goes over anything.</p>
+        </article>
+        <article class="vehicle">
+          <img src="assets/veh-walker-sm.webp" alt="A walker in its hangar" loading="lazy">
+          <h3 class="px">WALKER</h3>
+          <p>Two armoured legs. It steps over ground that stops wheels.</p>
+        </article>
+        <article class="vehicle">
+          <img src="assets/veh-bike-sm.webp" alt="A Raider rocket bike firing its fork rockets" loading="lazy">
+          <h3 class="px">ROCKET BIKE</h3>
+          <p>Raider-built, fork-mounted rockets. Also works as a missile.</p>
+        </article>
+        <article class="vehicle">
+          <img src="assets/veh-kestrel-sm.webp" alt="The Kestrel gunship lifting off" loading="lazy">
+          <h3 class="px">KESTREL</h3>
+          <p>The Commandos' VTOL gunship, crewed off its own pad.</p>
+        </article>
+        <article class="vehicle">
+          <img src="assets/veh-mech-sm.webp" alt="The 12 metre mech behind its shield" loading="lazy">
+          <h3 class="px">THE MECH</h3>
+          <p>12 metres tall, dropped from orbit, with two manned shell cannons.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAILER -->
+  <section class="section trailer" id="trailer">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker px">07 // FOOTAGE</p>
+        <h2 class="px">THE TRAILER</h2>
+      </div>
+      <div class="player reveal">
+        <video controls preload="none" poster="assets/trailer-poster.jpg">
+          <source src="assets/trailer-720.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section alt" id="gallery">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker px">08 // RECON</p>
+        <h2 class="px">GALLERY</h2>
+      </div>
+      <div class="gallery">
+        <button class="shot" data-full="assets/shot-01.webp"><img src="assets/shot-01-sm.webp" alt="An Assault Buggy cresting a burning hill" loading="lazy"></button>
+        <button class="shot wide" data-full="assets/shot-02.webp"><img src="assets/shot-02-sm.webp" alt="The alien nest under the Frontier" loading="lazy"></button>
+        <button class="shot" data-full="assets/shot-03.webp"><img src="assets/shot-03-sm.webp" alt="A vehicle on a hillside" loading="lazy"></button>
+        <button class="shot" data-full="assets/shot-04.webp"><img src="assets/shot-04-sm.webp" alt="A huge orbital blast" loading="lazy"></button>
+        <button class="shot" data-full="assets/shot-05.webp"><img src="assets/shot-05-sm.webp" alt="The Bone Worm bursting out of the ground" loading="lazy"></button>
+        <button class="shot" data-full="assets/shot-06.webp"><img src="assets/shot-06-sm.webp" alt="The Bone Collectors' body pit" loading="lazy"></button>
+        <button class="shot wide" data-full="assets/shot-07.webp"><img src="assets/shot-07-sm.webp" alt="A fortress wall blown open" loading="lazy"></button>
+        <button class="shot" data-full="assets/shot-08.webp"><img src="assets/shot-08-sm.webp" alt="Split screen versus, a strike incoming" loading="lazy"></button>
+        <button class="shot" data-full="assets/shot-09.webp"><img src="assets/shot-09-sm.webp" alt="Three rocket bikes in the bay" loading="lazy"></button>
+        <button class="shot" data-full="assets/shot-10.webp"><img src="assets/shot-10-sm.webp" alt="A Raider base from outside" loading="lazy"></button>
+        <button class="shot" data-full="assets/shot-11.webp"><img src="assets/shot-11-sm.webp" alt="A Skarn hive" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEVLOG / YOUTUBE -->
+  <section class="section devlog" id="devlog">
+    <div class="devlog-banner" style="--img: url('assets/yt-banner.webp')"></div>
+    <div class="wrap">
+      <div class="channel reveal">
+        <img class="channel-avatar" src="assets/youtube-profile-ultra17.png" alt="ULTRA17 logo" width="96" height="96">
+        <div>
+          <p class="kicker px">09 // TRANSMISSIONS</p>
+          <h2 class="px">ULTRA17 ON YOUTUBE</h2>
+          <p>Follow the build. Devlogs, new features and plenty of things exploding, straight from development.</p>
+        </div>
+        <a class="btn" href="https://www.youtube.com/@ULTRA17?sub_confirmation=1" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1z"/></svg>
+          Subscribe
+        </a>
+      </div>
+      <div class="videos">
+        <a class="video reveal" href="https://www.youtube.com/@ULTRA17/videos" target="_blank" rel="noopener">
+          <span class="video-thumb"><img src="assets/yt-kamikaze-sm.webp" alt="Kamikaze Bikes video thumbnail" loading="lazy"><span class="play" aria-hidden="true"></span></span>
+          <span class="video-meta"><span class="tag px">LATEST</span><span class="video-title">Kamikaze Bikes</span><span class="video-sub">Raider rocket bikes, built to blow up</span></span>
+        </a>
+        <a class="video reveal" href="https://www.youtube.com/@ULTRA17/videos" target="_blank" rel="noopener">
+          <span class="video-thumb"><img src="assets/yt-first-sm.webp" alt="Orbital Commando video thumbnail" loading="lazy"><span class="play" aria-hidden="true"></span></span>
+          <span class="video-meta"><span class="tag px">DEVLOG</span><span class="video-title">Orbital Commando in action</span><span class="video-sub">Destructible terrain, gore and orbital strikes</span></span>
+        </a>
+      </div>
+      <p class="more"><a href="https://www.youtube.com/@ULTRA17/videos" target="_blank" rel="noopener">All videos on the channel &rarr;</a></p>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section class="section alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker px">10 // MISSION PLAN</p>
+        <h2 class="px">ROADMAP</h2>
+      </div>
+      <ol class="roadmap">
+        <li class="done reveal"><span class="px">NOW</span><h3 class="px">DEMO v0.1</h3><p>Boot camp, skirmish on two maps, Commandos and Raiders, local co-op.</p></li>
+        <li class="reveal"><span class="px">FULL GAME</span><h3 class="px">THE EXPANSE + SKARN</h3><p>The giant fortress map and the alien hive faction.</p></li>
+        <li class="reveal"><span class="px">COMING SOON</span><h3 class="px">STORY MODE</h3><p>A campaign you can play in co-op.</p></li>
+        <li class="reveal"><span class="px">COMING SOON</span><h3 class="px">HORDE + ZOMBIES</h3><p>Hold the line against wave after wave, then against the dead.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- DEMO -->
+  <section class="section demo" id="demo">
+    <div class="wrap split">
+      <div class="reveal">
+        <p class="kicker px">11 // DEPLOY</p>
+        <h2 class="px">PLAY THE<br>FREE DEMO</h2>
+        <p class="lede">Boot camp with a gruff sergeant on the radio, then skirmish against a commander AI that sends wave after wave.</p>
+        <div class="hero-actions">
+          <a class="btn" data-itch href="#demo">Download on itch.io</a>
+          <a class="btn btn-ghost" href="https://www.youtube.com/@ULTRA17" target="_blank" rel="noopener">Watch the devlogs</a>
+        </div>
+        <p class="small">Windows 10/11, 64-bit, a DirectX 11 graphics card. Unzip anywhere and run OrbitalCommando.exe. Xbox controllers work.</p>
+      </div>
+      <details class="controls reveal" open>
+        <summary class="px">CONTROLS</summary>
+        <table>
+          <tbody>
+            <tr><th><kbd>A</kbd> <kbd>D</kbd></th><td>Move</td></tr>
+            <tr><th><kbd>W</kbd> / <kbd>Space</kbd></th><td>Jump / jetpack</td></tr>
+            <tr><th><kbd>S</kbd></th><td>Crouch / climb down</td></tr>
+            <tr><th><kbd>LMB</kbd></th><td>Fire</td></tr>
+            <tr><th><kbd>RMB</kbd></th><td>Sharp aim / alt fire</td></tr>
+            <tr><th><kbd>R</kbd></th><td>Reload</td></tr>
+            <tr><th><kbd>E</kbd></th><td>Pick up / grab / enter vehicle</td></tr>
+            <tr><th><kbd>1</kbd>-<kbd>6</kbd></th><td>Pick a weapon</td></tr>
+            <tr><th><kbd>B</kbd></th><td>Buy menu</td></tr>
+            <tr><th><kbd>N</kbd></th><td>Build mode</td></tr>
+            <tr><th><kbd>O</kbd></th><td>Aim an orbital strike</td></tr>
+            <tr><th><kbd>Q</kbd> hold</th><td>Switch soldier</td></tr>
+            <tr><th><kbd>Alt</kbd> hold</th><td>Squad orders</td></tr>
+            <tr><th><kbd>Tab</kbd></th><td>Tactical map</td></tr>
+          </tbody>
+        </table>
+        <p class="small">Everything can be rebound in Options.</p>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <a class="brand" href="#top">
+      <img src="assets/youtube-profile-ultra17.png" alt="" width="36" height="36">
+      <span class="brand-text"><span class="px">ULTRA17</span><span class="brand-sub">Orbital Commando // in development</span></span>
+    </a>
+    <nav class="footer-links" aria-label="Elsewhere">
+      <a href="https://www.youtube.com/@ULTRA17" target="_blank" rel="noopener">YouTube</a>
+      <a data-itch href="#demo">itch.io</a>
+      <a href="#top">Back to top</a>
+    </nav>
+    <p class="small">&copy; <span id="year">2026</span> ULTRA17. All in-game footage captured from Orbital Commando.</p>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Viewer">
+  <button class="lightbox-close" aria-label="Close">&times;</button>
+  <button class="lightbox-nav prev" aria-label="Previous">&#9664;</button>
+  <div class="lightbox-stage"></div>
+  <button class="lightbox-nav next" aria-label="Next">&#9654;</button>
+</dialog>
+
+<div class="scanlines" aria-hidden="true"></div>
+<script src="main.js"></script>
+</body>
+</html>
