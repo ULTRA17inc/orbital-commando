@@ -1,25 +1,7 @@
 // Orbital Commando // ULTRA17 — site behaviour.
 
-// The itch.io download page. Left blank, the download buttons read "Coming soon".
-const LINKS = {
-  itch: "https://kruza117.itch.io/orbital-commando-demo/purchase",
-};
-
 document.documentElement.classList.remove("no-js");
 document.getElementById("year").textContent = new Date().getFullYear();
-
-// itch.io buttons
-document.querySelectorAll("[data-itch]").forEach((a) => {
-  if (LINKS.itch) {
-    a.href = LINKS.itch;
-    a.target = "_blank";
-    a.rel = "noopener";
-  } else if (a.classList.contains("btn")) {
-    a.textContent = "Coming soon to itch.io";
-    a.setAttribute("aria-disabled", "true");
-    a.removeAttribute("href");
-  }
-});
 
 // Nav: solid once scrolled, burger menu on small screens.
 const nav = document.getElementById("nav");
