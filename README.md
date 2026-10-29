@@ -19,4 +19,16 @@ Once the demo page is live, put its URL in `LINKS.itch` at the top of `main.js`.
 
 ## Hosting
 
-Upload the `website/` folder as it is to GitHub Pages, Netlify or Cloudflare Pages. The whole folder is about 12 MB.
+The folder can also go as it is onto Netlify or Cloudflare Pages. It is about 12 MB.
+
+## Live site
+
+The site is live at https://ultra17inc.github.io/orbital-commando/, served by GitHub Pages from the main branch of the public repo `ULTRA17inc/orbital-commando`. That repo holds only this folder; the game repo stays private. To publish changes after committing them here, run these from the repo root:
+
+```
+git subtree split --prefix=website -b site-publish
+git push https://github.com/ULTRA17inc/orbital-commando.git site-publish:main
+git branch -D site-publish
+```
+
+GitHub rebuilds the site within a minute or two.
