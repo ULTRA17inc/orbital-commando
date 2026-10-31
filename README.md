@@ -15,7 +15,7 @@ Then open http://localhost:8080.
 
 ## Download links
 
-The demo's Download button points straight at the zip on the site repo's GitHub release (`demo-v0.2`). For a new demo build, upload the zip to a new release (`gh release create demo-v0.3 <zip> -R ULTRA17inc/orbital-commando`) and change the link in the `#demo` section of `index.html`. The itch.io links go to https://kruza117.itch.io/orbital-commando-demo.
+The demo's Download button points straight at the zip on the site repo's GitHub release (`demo-v0.3`). For a new demo build, upload the zip to a new release (`gh release create demo-v0.4 <zip> -R ULTRA17inc/orbital-commando`) and change the link in the `#demo` section of `index.html`. The itch.io links go to https://kruza117.itch.io/orbital-commando-demo.
 
 ## Hosting
 
